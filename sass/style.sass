@@ -1,0 +1,730 @@
+@font-face
+  font-family: Geometria-light;
+  src: url(../fonts/Geometria-Light.otf) format('opentype')
+  font-style: normal;
+  font-weight: normal;
+
+@font-face
+  font-family: Geometria-regular;
+  src: url(../fonts/Geometria.otf) format('opentype')
+  font-style: normal;
+  font-weight: normal;
+
+@font-face
+  font-family: Geometria-bold;
+  src: url(../fonts/Geometria-Bold.otf) format('opentype')
+  font-style: normal;
+  font-weight: normal;
+
+@font-face
+  font-family: Geometria-extra-light;
+  src: url(../fonts/Geometria-ExtraLight.woff) format('woff')
+  font-style: normal;
+  font-weight: bold;
+
+@font-face
+  font-family: Geometria-Med;
+  src: url(../fonts/Geometria-Medium.otf) format('opentype')
+  font-style: normal;
+  font-weight: normal;
+
+body
+  font-family: Geometria-light, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+
+h2
+  font-family: Geometria-bold;
+
+a
+  text-decoration: none;
+
+button
+  outline: none
+  cursor: pointer
+
+header
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  height: 77px;
+  background-color: #153259;
+
+.header-box
+  display: flex;
+  justify-content: center;
+
+.header-box,.menu,.menu__list
+  height: 100%;
+
+.menu-box
+  width: 1140px;
+  display: flex;
+  justify-content: center;
+
+
+.menu
+  width: 630px;
+
+
+  &__list
+    display: flex;
+    justify-content: space-around
+    align-items: center;
+    width: 100%
+    margin: 0;
+    padding: 0;
+
+
+  &__list-item
+    list-style: none
+
+  &__link
+    color: #fff;
+    font-size: 14px;
+    margin: 10px;
+    opacity: 0.7;
+    transition: opacity .2s ease;
+
+  &__link:hover
+    opacity: 1
+
+.account
+  width: 500px;
+  display: flex;
+  align-items: center;
+
+
+.lens
+  border-left: 2px solid #000
+  border-right: 2px solid #000
+  width: 85px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+.avatar
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 328px;
+  justify-content: center;
+  border-right: 2px solid #000;
+  height: 100%;
+  position: relative
+  z-index: 6
+
+  &__name
+    border: none
+    background: none
+
+  &__img
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+
+  &__list
+    display: none
+    width: 100%
+    position: absolute
+    top: 61px
+    background-color: #fff
+    padding: 0
+    list-style: none
+
+  &__item:after
+    content: '__________________________'
+    display: block
+    color: #f5f5f5
+    text-align: center
+
+  &__link
+    display: block
+    padding: 25px 0 10px 35px
+    color: #4f4d4d
+    transition: all .1s ease-in
+    width: 100%
+    font-size: 14px
+
+  &__link:hover
+    margin-left: 20px
+
+
+.search
+  width: 25px;
+  height: 20px;
+
+.avatar__name
+  color: #fff;
+  opacity: 0.6
+
+  &:hover
+    opacity: 1;
+
+// icons
+
+.icon
+  background-image: url(../img/icons/css_sprites.png)
+  display: inline-block
+  vertical-align: 0
+  margin-right: 10px
+
+  &--red
+    background-position: -66px -10px
+    width: 8px
+    height: 9px
+
+  &--hover
+    background-position: -10px -39px
+    width: 8px
+    height: 9px
+
+  &--green
+    background-position: -38px -10px
+    width: 8px
+    height: 9px
+
+  &--gray
+    background-position: -10px -10px
+    width: 8px
+    height: 9px
+
+.bell
+  width: 99px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative
+
+  &__list
+    display: none
+    background-color: #fff
+    list-style: none
+    position: absolute
+    top: 61px
+    right: 0
+    padding: 0
+    width: 419px
+    z-index: 15
+
+  &__link
+    width: 100%
+    display: block
+    padding: 25px 0 10px 35px
+    color: #4f4d4d
+    transition: all .1s ease-in
+    width: 100%
+    font-size: 14px
+
+  &__link:hover
+    margin-left: 20px
+    color: #67aed9
+
+
+  &__item:after
+    content: '__________________________'
+    display: block
+    color: #f5f5f5
+    text-align: center
+
+.lens:hover,.avatar:hover,.bell:hover
+  background-color: #1f273c;
+
+.bell-svg
+  width: 29px;
+  height: 27px;
+
+main
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+
+.container
+  max-width: 1140px;
+  width: 100%;
+  position: relative
+  margin: 40px 35px
+
+.controls-box
+  position: relative
+  max-width: 1140px;
+  width: 100%
+
+@media (max-width: 1600px)
+  .controls-box
+    margin: 35px auto
+
+
+
+.block
+  background: #fff url(../img/slider-bg/slider-bg.png) no-repeat
+  width: 1140px;
+  height: 540px;
+  position: relative;
+
+  &__text
+    font-size: 24px;
+    width: 370px;
+    margin-left: 25px;
+    color: #fff;
+    position: absolute;
+
+  &__slider
+    width: 572px;
+    height: 180px;
+    background: #153259;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+
+.block--2
+  background: url(../img/slider-bg/slide1.jpg) no-repeat 50%;
+  background-size: cover;
+
+.block--3
+  background: url(../img/slider-bg/durov-1.jpg) no-repeat 50%;
+  background-size: cover;
+
+.block--4
+  background: url(../img/slider-bg/dur3.png) no-repeat 50%;
+
+.slick
+  max-width: 1140px;
+  width: 100%
+
+@media (max-width: 1600px)
+  .slick
+
+.arrows
+  width: 51px;
+  height: 51px;
+  fill: #fff
+
+.arrows:active #circle
+  fill: #1f273c
+
+#nc
+  fill: #fff
+
+aside
+  max-width: 360px;
+  width: 100%
+  position: absolute
+  right: 38px
+
+@media (max-width: 1480px)
+ .task
+  display: none;
+
+.aside-column
+  text-align: center
+  text-align: -webkit-center
+
+.task
+  width: 100%;
+  height: 318px;
+  background: #2384ce;
+  color: #fff;
+  box-sizing: border-box
+
+  &__items
+    display: flex;
+    justify-content: center;
+
+  &__item
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 116px;
+    height: 85px;
+    background: none;
+    border: none;
+    color: #fff;
+    transition: all .1s ease;
+    padding: 0
+
+  &__item:active
+    background-color: #0b5186;
+
+  &__item:nth-child(1), &__item:nth-child(2)
+    border-right: 1px solid #1c6fae;
+
+  &__title
+    font-size: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+
+@media (max-width: 1612px)
+  .task
+    width: 50%
+    align-items: center
+    overflow-x: hidden
+
+@media (max-width: 1612px)
+  .task__items
+    flex-direction: column
+    align-items: center
+
+@media (max-width: 1612px)
+  .task__item:nth-child(1),.task__item:nth-child(2)
+    border-right: none
+
+
+  &__text
+    font-size: 14px;
+
+.task__title:before
+  content: '';
+  display: inline-block;
+  background: url(../img/icons/to-do-list.png);
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  margin: 20px 28px
+
+.number
+  font-family: Geometria-extra-light;
+  font-size: 56px;
+
+.create
+  background: #0b5186
+  border: none;
+  border-radius: 22px;
+  padding: 10px 40px;
+  font-family: Geometria-Med;
+  font-size: 14px;
+  color: #fff;
+  margin: 40px 25px;
+
+  &:active
+    opacity: 0.7
+
+@media (max-width: 1620px)
+  .create
+    margin: 10px
+
+
+.co-worker
+  margin-top: 42px;
+
+  &__svg
+    display: flex;
+    align-items: center;
+
+  &__links
+    width: 100%;
+
+  &__link
+    display: inline-block;
+    color: #61656a;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    padding: 10px 14px;
+    margin: 5px 2px;
+    font-size: 14px;
+    transition: all .1s ease;
+
+  &__link:hover
+    color: #1f273c
+    border-color: #1f273c
+
+  &__link:active
+    color: #fff;
+    background-color: #1f273c;
+
+  &__link:nth-child(3),&__link:nth-child(4)
+    padding: 10px 5px;
+
+  &__link:nth-child(6),&__link:nth-child(5)
+    padding: 10px 7px;
+
+
+
+.man-svg
+  margin-right: 15px;
+  width: 40px;
+  height: 40px;
+
+// aside end
+
+.container-2
+  height: 559px;
+  background-color: #fff;
+  max-width: 1140px;
+  width: 100%
+  margin: 50px 0 0 49px
+  border: 1px solid #eeeeee;
+  position: relative
+
+  &__item
+    display: flex;
+    align-items: center;
+    padding: 35px 45px 0 40px;
+    justify-content: space-between;
+
+  &__title-box
+    display: flex;
+    align-items: center;
+
+.svg-paper
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+
+.burger
+  background: url(../img/icons/burger.png) no-repeat 50%;
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+  border: none;
+  position: relative
+
+.burger-animate
+  background: url(../img/icons/cross.png) no-repeat 50%
+  width: 16px
+  height: 16px
+
+.news-dropdown
+  padding: 0
+  display: none
+  position: absolute
+  left: -94px
+  z-index: 2
+  background-color: #fff
+  border: 1px solid #000
+
+  &__item
+    list-style: none
+    background: #2384ce
+    text-align: center
+
+  &__item:hover
+    background: #87CEFA
+
+  &__link
+    display: block
+    color: #fff
+    font-size: 25px
+    margin: 0 10px
+    border-bottom: 1px solid #000
+
+.news-box
+  margin: 35px 0 0 40px;
+  display: flex;
+  flex-wrap: wrap
+  justify-content: space-between;
+
+  &__item
+    width: 470px;
+    display: flex;
+    margin-bottom: 40px;
+
+  & p
+    font-size: 14px;
+    margin: 0px 0 0 15px;
+
+  &__text
+    height: 35px;
+    position: relative;
+    height: 120px;
+
+  &__likes
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+.bold
+  font-family: Geometria-regular
+
+.like-svg
+  width: 20px;
+  height: 20px;
+
+.like__num
+  position: absolute;
+  bottom: 6px;
+  left: 25px;
+  color: #979797;
+  width: 50px
+
+.views
+  position: absolute;
+  bottom: 1px;
+  left: 100px;
+  padding-bottom: 2px;
+
+  &__svg
+    width: 20px;
+    height: 20px;
+
+  &__num
+    position: absolute;
+    bottom: 6px;
+    left: 23px;
+    color: #979797;
+    width: 50px;
+
+.more-news
+  position: absolute
+  bottom: 38px
+  left: 35px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  align-items: center
+
+  &__btn
+    border: none
+    background: none
+    cursor: pointer
+
+  &-svg
+    width: 40px
+    height: 40px
+    color: #fff
+
+  &__text
+    font-size: 14px
+
+.more-news__btn:active #more-news
+  fill: #000
+
+#more-news
+  fill: #878787
+
+.quiz
+  background-color: #fff
+  border: 1px solid #eeeeee
+  margin-top: 55px
+
+  &__svg
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    align-items: center
+    padding: 30px 0 0 30px
+
+  &__title
+    margin: 0
+
+  &__p
+    font-size: 20px
+
+  &__box
+    margin-left: 30px
+    width: 260px
+
+  &__list
+    list-style: none
+    padding: 0
+
+  &__btn
+    border: none
+    background: none
+    margin: 7.5px
+    font-size: 14px
+    font-family: Geometria-light
+    display: inline-block
+    vertical-align: middle
+
+  &__btn:hover
+    color: #67aed9
+
+  &__item
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    align-items: center
+
+li:nth-child(1) .quiz__btn:before
+  background: url(../img/icons/c1.png) no-repeat
+  width: 11px
+  height: 10px
+  content: ''
+  display: inline-block
+  margin-right: 10px
+
+li:nth-child(2) .quiz__btn:before
+  background: url(../img/icons/c2.png) no-repeat
+  width: 11px
+  height: 10px
+  content: ''
+  display: inline-block
+  margin-right: 10px
+
+li:nth-child(3) .quiz__btn:before
+  background: url(../img/icons/c3.png) no-repeat
+  width: 11px
+  height: 10px
+  content: ''
+  display: inline-block
+  margin-right: 10px
+
+li:nth-child(4) .quiz__btn:before
+  background: url(../img/icons/c4.png) no-repeat
+  width: 11px
+  height: 10px
+  content: ''
+  display: inline-block
+  margin-right: 10px
+
+.quiz-svg
+  width: 40px
+  height: 40px
+  margin-right: 15px
+
+.quiz__result
+  width: 100%
+  height: 340px
+  background-color: #454545
+
+.result
+  margin: 40px 40px
+  padding-top: 15px
+
+  &__title
+    font-size: 20px
+    color: #fff
+
+.circle
+  text-align: center
+
+  &__text
+    position: relative
+
+.sum
+  font-size: 60px
+  position: absolute
+  top: 46%
+  margin-top: -20%
+  left: 50%
+  margin-left: -20%
+  color: #fff
+
+.voted
+  position: absolute
+  bottom: 34%
+  left: 50%
+  margin-left: -22%
+  color: #9C9C9C
+
+.total
+  font-size: 24px
+  font-family: Geometria-bold
+  color: #fff
