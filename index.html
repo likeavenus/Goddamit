@@ -6,6 +6,8 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/burger.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,25 +15,29 @@
 <header class="header">
   <div class="header-box">
     <div class="menu-box">
-      <nav class="menu">
-        <ul class="menu__list">
-          <li class="menu__list-item">
-            <a href="#" class="menu__link">Новости</a>
+      <div class="menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <nav class="menu-wrap">
+        <ul class="menu-wrap__list">
+          <li class="menu-wrap__list-item">
+            <a href="#" class="menu-wrap__link">Новости</a>
           </li>
-          <li class="menu__list-item">
-            <a href="#" class="menu__link">Информация</a>
+          <li class="menu-wrap__list-item">
+            <a href="#" class="menu-wrap__link">Информация</a>
           </li>
-          <li class="menu__list-item">
-            <a href="#" class="menu__link">Лента</a>
+          <li class="menu-wrap__list-item">
+            <a href="#" class="menu-wrap__link">Лента</a>
           </li>
-          <li class="menu__list-item">
-            <a href="#" class="menu__link">Группы</a>
+          <li class="menu-wrap__list-item">
+            <a href="#" class="menu-wrap__link">Группы</a>
           </li>
-          <li class="menu__list-item">
-            <a href="#" class="menu__link">Сотрудники</a>
+          <li class="menu-wrap__list-item">
+            <a href="#" class="menu-wrap__link">Сотрудники</a>
           </li>
-          <li class="menu__list-item">
-            <a href="#" class="menu__link">Политика и регламенты</a>
+          <li class="menu-wrap__list-item">
+            <a href="#" class="menu-wrap__link">Политика и регламенты</a>
           </li>
         </ul>
       </nav>
@@ -47,7 +53,7 @@
           </svg>
         </div>
         <div class="avatar">
-          <img src="src/img/profile-ava/profile.png" alt="" class="avatar__img">
+          <img src="img/profile-ava/profile.png" alt="" class="avatar__img">
           <button class="avatar__name">Маргарита Константиновна</button>
           <ul class="avatar__list" id="avatar-list">
             <li class="avatar__item"><a href="#" class="avatar__link">Мой профиль</a></li>
@@ -97,7 +103,6 @@
 </header>
 <main>
   <aside>
-    <div class="aside-column">
       <div class="task">
         <h2 class="task__title">Задачи</h2>
         <div class="task__items">
@@ -116,7 +121,7 @@
         </div>
         <button class="create">Создать раздачу</button>
       </div>
-    </div>
+
     <div class="co-worker">
       <div class="co-worker__svg">
         <svg class="man-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.9999 40">
@@ -141,7 +146,8 @@
         <a href="#" class="co-worker__link">Истории успеха</a>
         <a href="#" class="co-worker__link">Корпоративные стандарты</a>
       </div>
-      <div class="quiz">
+    </div>
+          <div class="quiz">
         <div class="quiz__box">
           <div class="quiz__svg">
             <svg class="quiz-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.0001 40.0002">
@@ -179,7 +185,7 @@
             <p class="result__title">На данный момент мы едем</p>
             <div class="circle">
               <div class="circle__text">
-              <img src="src/img/ellipse.png" alt="circle" class="circle__img">
+              <img src="img/ellipse.png" alt="circle" class="circle__img">
                 <p class="sum">73%</p>
                 <p class="voted">Проголосовало</p>
                 <p class="total">в Лапландию</p>
@@ -188,7 +194,6 @@
           </div>
         </div>
       </div>
-    </div>
   </aside>
 
   <div class="container">
@@ -234,8 +239,8 @@
         </button>
       </div>
       <div class="news-box">
-        <div class="news-box__item">
-          <img src="src/img/news-box-1.jpg" alt="expo" class="news-box__img">
+        <article class="news-box__item">
+          <img src="img/news-box-1.jpg" alt="expo" class="news-box__img">
           <div class="news-box__text">
             <p class="norm">Сегодня в 14:00</p>
             <p class="bold">Новый член нашей дружной команды</p>
@@ -256,9 +261,9 @@
               <span class="views__num">6 898</span>
             </div>
           </div>
-        </div>
-        <div class="news-box__item">
-          <img src="src/img/news-box-2.jpg" alt="expo" class="news-box__img">
+        </article>
+        <article class="news-box__item">
+          <img src="img/news-box-2.jpg" alt="expo" class="news-box__img">
           <div class="news-box__text">
             <p class="norm">Вчера</p>
             <p class="bold">Новый год в школе интернате "Абсолют"</p>
@@ -279,9 +284,9 @@
               <span class="views__num">88</span>
             </div>
           </div>
-        </div>
-        <div class="news-box__item">
-          <img src="src/img/news-box-2.jpg" alt="expo" class="news-box__img">
+        </article>
+        <article class="news-box__item">
+          <img src="img/news-box-2.jpg" alt="expo" class="news-box__img">
           <div class="news-box__text">
             <p class="norm">23.04.2016</p>
             <p class="bold">Поездка на экскурсию в Санкт-Петербург</p>
@@ -302,9 +307,9 @@
               <span class="views__num">98</span>
             </div>
           </div>
-        </div>
-        <div class="news-box__item">
-          <img src="src/img/news-box-1.jpg" alt="expo" class="news-box__img">
+        </article>
+        <article class="news-box__item">
+          <img src="img/news-box-1.jpg" alt="expo" class="news-box__img">
           <div class="news-box__text">
             <p class="norm">22.04.2016</p>
             <p class="bold">Празднование 8 марта в школе-интернате "Абсолют". Фотоотчет о прошедшем мероприятии</p>
@@ -325,7 +330,7 @@
               <span class="views__num">6</span>
             </div>
           </div>
-        </div>
+        </article>
           <div class="more-news">
             <button class="more-news__btn">
               <svg class="more-news-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.0003 40.0003">
@@ -345,9 +350,82 @@
           </div>
        </div>
     </section>
+    <section class="container-3">
+
+      <div id="tabs">
+        <ul>
+          <li><a href="#tabs-1">Все</a></li>
+          <li><a href="#tabs-2">ГО</a></li>
+          <li><a href="#tabs-3">НДК</a></li>
+          <li><a href="#tabs-4">ДПН</a></li>
+          <li><a href="#tabs-5">ЖКХ</a></li>
+          <li><a href="#tabs-6">C&M</a></li>
+          <li><a href="#tabs-7">ТДА</a></li>
+          <li><a href="#tabs-8">ЕП</a></li>
+        </ul>
+        <div id="tabs-1">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, id!</p>
+        </div>
+        <div id="tabs-2">
+          <div class="info-box__title">
+            <svg class="info-box-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.5988 9.5984">
+              <g id="" data-name="" style="isolation: isolate">
+                <g id="" data-name="">
+                  <path d="M4.7994,0A4.7992,4.7992,0,1,0,9.5988,4.799,4.8047,4.8047,0,0,0,4.7994,0Zm0,9.1672A4.3683,4.3683,0,1,1,9.1682,4.799,4.3733,4.3733,0,0,1,4.7994,9.1672Zm0.1018-5.474a0.2809,0.2809,0,0,0-.2952.2637V6.9337a0.2974,0.2974,0,0,0,.591,0V3.957A0.2812,0.2812,0,0,0,4.9012,3.6932ZM4.92,2.6419a0.3413,0.3413,0,0,0-.3589.32,0.3613,0.3613,0,0,0,.718,0A0.3414,0.3414,0,0,0,4.92,2.6419Z" style="fill: #253558;fill-rule: evenodd"/>
+                </g>
+              </g>
+            </svg>
+          <h2 class="">Информация</h2>
+          </div>
+          <div class="info-box">
+            <article class="info-box__new">
+              <div class="avatar-box">
+                <img class="info-box__ava" src="img/profile-ava/profile.png" alt="ava1">
+                <h2 class="new">Маргарита Петрова</h2>
+              </div>
+              <p class="new__title">Сегодня в 13:00</p>
+              <img src="img/icons/vkl1.png" alt="new" class="new__img">
+              <p class="new__text1">Празднование Нового Года в школе-интернате "Абсолют"</p>
+              <p class="new__text2">Сегодня, приоритетным направлением деятельности Группы являтся девелопмент жилой и коммерческой недвижимости в Москве и Московской области. Группы являются девелопмент жилой</p>
+            </article>
+            <article class="info-box__new"><div class="avatar-box"></div>
+              <div class="avatar-box">
+                <img class="info-box__ava" src="img/profile-ava/profile.png" alt="ava3">
+                <h2 class="new">Светлана Нестерова</h2>
+              </div>
+              <p class="new__title">Вчера</p>
+              <img src="img/icons/vkl2.png" alt="new" class="new__img">
+              <p class="new__text1">Организовано подразделение по ипотечному обслуживанию</p>
+              <p class="new__text2">Для вашего удобства в "Абсолют Недвижимость" организовано специальное подразделение по ипотечному обслуживанию, сотрудники которого абсолютно бесплатно возьмут</p>
+            </article>
+            <article class="info-box__new"><div class="avatar-box"></div>
+              <div class="avatar-box">
+                <img class="info-box__ava" src="img/profile-ava/profile2.png" alt="ava2">
+                <h2 class="new">Никита Титов</h2>
+              </div>
+              <p class="new__title">23.04.2016</p>
+              <img src="img/icons/vkl3.png" alt="new" class="new__img">
+              <p class="new__text1">Приоритетные направления группы</p>
+              <p class="new__text2">Сегодня, приоритетным направлением деятельности Группы является девелопмент жилой и коммерческой недвижимости в Москве и Московской области. В рамках этого направления строятся жилые комплексы, коттеджные поселки</p>
+            </article>
+          </div>
+          <button class="add-new">Добавить новость</button>
+        </div>
+        <div id="tabs-3">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quo.</p></div>
+        <div id="tabs-4"><p>Text 4</p></div>
+        <div id="tabs-5"><p>Text 5</p></div>
+        <div id="tabs-6"><p>Text 6</p></div>
+        <div id="tabs-7"><p>Text 7</p></div>
+        <div id="tabs-8"><p>Text 8</p></div>
+      </div>
+    </div>
+  </section>
 </main>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/slick.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/burger.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

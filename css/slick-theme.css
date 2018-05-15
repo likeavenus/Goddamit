@@ -89,6 +89,7 @@
     left: 74%;
     z-index: 2;
 }
+
 [dir='rtl'] .slick-prev
 {
     right: -25px;
@@ -210,3 +211,4 @@
     opacity: .75;
     color: #000;
 }
+
